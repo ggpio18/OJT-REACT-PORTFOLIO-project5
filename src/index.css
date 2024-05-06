@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url(/fonts/Regular-Bold.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter-Light';
+  src: url(/fonts/Inter-Light.woff) format("woff");
+}
+@font-face {
+  font-family: 'Inter-Medium';
+  src: url(/fonts/Inter-Medium.woff) format("woff");
+}
+
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url(/fonts/Inter-Bold.woff) format("woff");
+}
+
+:root{
+  --primary: 29 27 27;
+  --secondary: 255 255 255;
+  --accent: 225 255 0;
+  --accent2: 46 5 209;
+  --header: 12 12 12 0;
+  --haccent: 123 255 0;
+}
+
+.dark{
+  --primary: rgb(255, 255, 255);
+  --secondary: rgb(29, 27, 27);
+  --accent: 225, 255, 0;
+  --accent2: rgb(46, 5, 209);
+  --header: 12 12 12 0;
+  --haccent: 123, 255, 0;
+}
+
+@layer base {
+  body{
+    @apply
+    text-secondary
+    font-regular
+    bg-primary
+  }
+
+  ul{
+    @apply
+    list-none
+  }
+
+  img{
+    @apply
+    block
+    w-full
+    h-auto
+  }
+
+  h1,h2,h3,h4,h5,h6{
+    @apply
+    font-bold
+    font-thicker
+  }
+  
+
+  p{
+    @apply
+    font-regular
+  }
+
+}
+
+@layer components{
+  /* Reusable components */
+.container{
+  @apply
+  mx-[20rem]
+}
+
+.btn{
+  @apply
+  py-3
+  px-7
+  bg-white
+  text-black
+  border
+  border-black
+}
+.btn:hover{
+  @apply
+  py-3
+  px-7
+  bg-black
+  text-white
+  border-[1px]
+  border-white
+}
+
+.btn--v2{
+  @apply
+  py-3
+  px-7
+  bg-white
+  text-black
+  border
+  border-black
+}
+
+.btn--v3{
+  @apply
+  py-3
+  px-7
+  bg-black
+  text-white
+  border
+  border-black
+}
+
+.btn--v3:hover{
+  @apply
+  py-3
+  px-7
+  bg-white
+  text-black
+  border
+  border-black
+}
+
+/* header */
+.menu{
+  @apply
+  text-lg
+}
+
+.menu li{
+  @apply
+  hover:text-haccent
+}
+
+.active {
+  @apply
+  text-haccent
+}
+
+/* hero banner */
+.banner{
+  @apply
+  bg-[url(https://via.placeholder.com/500)]
+  h-[100vh]
+  bg-cover
+  bg-center
+  bg-no-repeat
+}
+
+.socialshb{
+  @apply
+  text-3xl
+}
+
+.socialshb li{
+  @apply
+  hover:text-haccent
+}
+
+/* about me section */
+.aboutMe{
+  @apply
+  text-black
+}
+
+.socialam{
+  @apply
+  text-2xl
+}
+
+.socialam li{
+  @apply
+  hover:text-haccent
+}
+
+/* cta */
+.cta__content{
+  @apply
+  text-black
+}
+
+  /* footer */
+  .right ul li{
+    @apply
+    text-2xl
+  }
+}
