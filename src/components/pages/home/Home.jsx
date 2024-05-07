@@ -6,8 +6,11 @@ import { Link } from 'react-router-dom'
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaTwitterSquare } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
-import { BsYoutube } from "react-icons/bs";
+import { FaYoutubeSquare } from "react-icons/fa";
 import { IoMailSharp } from "react-icons/io5";
+import 'animate.css';
+import Gallery from './Gallery'
+
 
 
 const Home = () => {
@@ -16,20 +19,20 @@ const Home = () => {
       <Header/>
       {/*Hero  banner */}
       <section className='banner flex items-center'>
-      <div className='bg-black w-[50px] py-5 px-2'>
+      <div className='bg-black w-[50px] py-5 px-2 '>
           <ul className='socialshb grid gap-8'>
             <li><Link to="#"><FaFacebookSquare /></Link></li>
             <li><Link to="#"></Link><FaTwitterSquare /></li>
             <li><Link to="#"></Link><FaInstagramSquare /></li>
-            <li><Link to="#"></Link><BsYoutube /></li>
+            <li><Link to="#"></Link><FaYoutubeSquare /></li>
             <li><Link to="#"></Link><IoMailSharp /></li>
           </ul>
         </div>
 
         <div className="container">
-          <div className="hero__wrapper text-center grid place-items-center">
-            <h1 className='text-[5rem]'>Welcome</h1>
-            <h1 className='text-[5rem]'>HELLO I'M <span className='text-haccent'>PIO</span></h1>
+          <div className="hero__wrapper text-center grid grid-cols-1 place-items-center phone:">
+            <h1 className='text-[5rem] animate__animated animate__bounce'>Welcome</h1>
+            <h1 className='text-[5rem]  animate-type2'>HELLO I'M <span className='text-haccent'>PIO</span></h1>
             <div className='px-[17rem]'>
             <p className='mb-5 mx-[12rem]'>Im an I.T student aspiring to be A full stack-developer
                 with a keen eye for detail. Lets work together so 
@@ -42,11 +45,11 @@ const Home = () => {
       </section>
 
       {/* About me */}
-      <section className='aboutMe bg-secondary p-10  mt-'>
-      <div className="container">
+      <section id='aboutMe' className='aboutMe bg-secondary p-10 overflow-hidden transition-all'>
+      <div className="container2">
         <div className="aboutme__wrapper grid grid-cols-2 gap-[16rem] place-items-center h-[70vh]">
           <div className="about_left">
-            <h2 className='mb-3 text-3xl'>About_Pio.</h2>
+            <h2 className='mb-3 text-3xl animate-type'>About_Pio.</h2>
             <p className='mb-5 text-base'>Hello! Im Piolo C. Aranza, an I.t student currently in my 4th year of the BSIT course. I have a strong passion for technology and genuine curiosity for the ever-evolving world of IT. Throughout my academic journey. I have gained solid foundation in web development, programming, database management, networking and game development. I actively seek opportunities to enhance my knowledge and skills through continuous learning, and I enjoy working on projects both independently and as part of a team</p>
            
             <p className='mb-5 text-base'>My goal is to become a well-rounded IT professional who can leverage technology to create practical solutions and drive positive change</p>
@@ -56,17 +59,16 @@ const Home = () => {
                 <li><Link to="#"><FaFacebookSquare /></Link></li>
                 <li><Link to="#"></Link><FaTwitterSquare /></li>
                 <li><Link to="#"></Link><FaInstagramSquare /></li>
-                <li><Link to="#"></Link><BsYoutube /></li>
+                <li><Link to="#"></Link><FaYoutubeSquare /></li>
                 <li><Link to="#"></Link><IoMailSharp /></li>
               </ul>
             </div>
             <button className='btn btn--v2'>Download CV</button>
           </div>
           <div className="about_right grid place-items-center relative">
-            <img src="https://via.placeholder.com/500x500" alt=""  className='size-[500px] border border-black z-[9999]'/>
+            <img src="../../../public/img/aboutme.jpg" alt=""  className='object-cover size-[500px] border border-black z-[9999]'/>
             <div className="grid absolute size-[500px] border bg-black border-black 
             -bottom-[20px] -right-4 "></div>
-
           </div>
         </div>
       </div>
@@ -75,25 +77,32 @@ const Home = () => {
       {/* timeline  must ifnished*/}
 
       {/* projects gallery  MUST FINISHED*/}
-      <section className='projectG'>
+      <section className='projectG bg-primary2 py-10'>
         <div className="project__wrapper">
-          <div className='block-header text-center'>
-            <h2>PROJECT GALLERY</h2>
-            <p>Here are soem of my projects</p>
+          <div className='block-header text-center mb-5'>
+            <h2 className='text-white text-3xl mb-3'>PROJECT GALLERY</h2>
+            <p className='text-lg'>Here are some of my projects</p>
           </div>
-
-          
+            <Gallery/> 
         </div>
       </section>
 
       {/* cta */}
-      <section className='cta grid place-items-center bg-white p-5 mt-5'>
+      <section className='cta grid place-items-center bg-white py-7 mt-5'>
           <div className="cta__content grid place-items-center mt-5">
               <h2 className='text-2xl'>Feel free to  talk about upcoming Project</h2>
-              <p className='mb-10 text-lg'>"Reach out for personalized assistance."</p>
+              <p className='mb-5 text-lg'>"Reach out for personalized assistance."</p>
               <button className='btn btn--v3 mb-3'>Contact Us</button>
           </div>
       </section>
+
+      {/* try */}
+      
+      
+
+      
+
+      
      
       
 
@@ -147,6 +156,8 @@ const Home = () => {
     </div>
 </div>
 </div> */}
+
+
 
 {/* try */}
 
