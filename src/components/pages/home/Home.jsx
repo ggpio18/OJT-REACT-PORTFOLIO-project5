@@ -33,7 +33,7 @@ const Home = () => {
           <div className="hero__wrapper text-center grid grid-cols-1 place-items-center phone:">
             <h1 className='text-[5rem] animate__animated animate__bounce'>Welcome</h1>
             <h1 className='text-[5rem]  animate-type2'>HELLO I'M <span className='text-haccent'>PIO</span></h1>
-            <div className='px-[17rem]'>
+            <div className='lg:px-[17rem]  md:px-[10rem]'>
             <p className='mb-5 mx-[12rem]'>Im an I.T student aspiring to be A full stack-developer
                 with a keen eye for detail. Lets work together so 
                 we can achieve you business goals. </p>
@@ -47,7 +47,7 @@ const Home = () => {
       {/* About me */}
       <section id='aboutMe' className='aboutMe bg-secondary p-10 overflow-hidden transition-all'>
       <div className="container2">
-        <div className="aboutme__wrapper grid grid-cols-2 gap-[16rem] place-items-center h-[70vh]">
+        <div className="aboutme__wrapper grid lg:grid-cols-2 lg:gap-[16rem] md:grid-cols-1 md:gap-[10rem] sm:grid-cols-1 sm:gap-[5rem] place-items-center h-[70vh]">
           <div className="about_left">
             <h2 className='mb-3 text-3xl animate-type'>About_Pio.</h2>
             <p className='mb-5 text-base'>Hello! Im Piolo C. Aranza, an I.t student currently in my 4th year of the BSIT course. I have a strong passion for technology and genuine curiosity for the ever-evolving world of IT. Throughout my academic journey. I have gained solid foundation in web development, programming, database management, networking and game development. I actively seek opportunities to enhance my knowledge and skills through continuous learning, and I enjoy working on projects both independently and as part of a team</p>
@@ -65,10 +65,11 @@ const Home = () => {
             </div>
             <button className='btn btn--v2'>Download CV</button>
           </div>
-          <div className="about_right grid place-items-center relative">
-            <img src="../../../public/img/aboutme.jpg" alt=""  className='object-cover size-[500px] border border-black z-[9999]'/>
-            <div className="grid absolute size-[500px] border bg-black border-black 
-            -bottom-[20px] -right-4 "></div>
+          <div className="about_right grid grid-cols-1 place-items-center relative">
+            <img src="../../../public/img/aboutme.jpg" alt=""  className='object-cover 2xl:size-[500px]  lg:size-[500px] sm:size-[300px] border border-black'/>
+            <div className="grid md:grid md:grid-cols-1 absolute lg:size-[500px]  md:size-[300px]  border bg-black border-black 
+            -bottom-[20px] -right-4 ">
+            </div>
           </div>
         </div>
       </div>
@@ -98,16 +99,6 @@ const Home = () => {
 
       {/* try */}
       
-      
-
-      
-
-      
-     
-      
-
-      
-
 {/* <div class="flex items-center justify-center py-4 md:py-8 flex-wrap">
     <button type="button" class="text-blue-700 hover:text-white border border-blue-600 bg-white hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:bg-gray-900 dark:focus:ring-blue-800">All categories</button>
     <button type="button" class="text-gray-900 border border-white hover:border-gray-200 dark:border-gray-900 dark:bg-gray-900 dark:hover:border-gray-700 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-full text-base font-medium px-5 py-2.5 text-center me-3 mb-3 dark:text-white dark:focus:ring-gray-800">Shoes</button>
