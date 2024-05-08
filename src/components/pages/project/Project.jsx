@@ -8,7 +8,7 @@ const Project = () => {
     <>
       <Header/>
         {/* Projects */}
-        <div className='text-center mt-10'>
+        <div className='text-center mt-[8rem]'>
             <div className='flex justify-center gap-5'>
             <img src="../../../public/img/projectlogo.png" alt="" className='size-[30px]'/>
             <h1 className='text-black text-3xl'>PROJECTS</h1>

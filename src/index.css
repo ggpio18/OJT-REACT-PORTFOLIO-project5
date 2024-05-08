@@ -52,6 +52,7 @@
   ul{
     @apply
     list-none
+    font-regular
   }
 
   img{
