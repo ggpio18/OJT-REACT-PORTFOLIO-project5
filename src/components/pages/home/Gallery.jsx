@@ -5,7 +5,8 @@ const Gallery = () => {
     <>
       <div className="container mx-auto px-5 py-2 lg:px-32 lg:pt-5 mb-5">
   <div className="-m-1 flex flex-wrap md:-m-2">
-    <div className="flex w-1/2 flex-wrap">
+    <div className="flex w-1/2 flex-wrap" data-aos="fade-up"
+     data-aos-anchor-placement="top-center">
       <div className="w-1/2 p-1 md:p-2 hover:bg-[#09090979]  hover:opacity-45 ">
         <img
           alt="gallery"
@@ -25,7 +26,8 @@ const Gallery = () => {
           src="https://tecdn.b-cdn.net/img/Photos/Horizontal/Nature/4-col/img%20(73).webp" />
       </div>
     </div>
-    <div className="flex w-1/2 flex-wrap">
+    <div className="flex w-1/2 flex-wrap"  data-aos="fade-down"
+     data-aos-anchor-placement="bottom-bottom">
       <div className="w-full p-1 md:p-2 hover:bg-[#09090979]  hover:opacity-45 ">
         <img
           alt="gallery"

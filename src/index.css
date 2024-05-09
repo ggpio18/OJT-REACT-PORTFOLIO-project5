@@ -46,7 +46,7 @@
     @apply
     text-secondary
     font-regular
-    
+    overflow-x-hidden
   }
 
   ul{

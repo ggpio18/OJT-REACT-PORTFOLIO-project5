@@ -12,16 +12,26 @@ import 'animate.css';
 import AOS from 'aos';
 import Gallery from './Gallery'
 import Terminal from '../../partials/Terminal'
+import Spotify from '../../partials/Spotify'
+import { SpotifyEmbed } from 'spotify-embed'
 
 
 
 const Home = () => {
+   //download resume
+  const handleDownloadResume = () => {
+   const link = document.createElement('a');
+   link.href = '../../resume/resume.pdf';
+   link.download = 'resume.pdf';
+   link.click();
+ };
+
   return (
     <div>
       <Header/>
       {/*Hero  banner */}
       <section className='banner flex items-center'>
-      <div className='bg-black w-[50px] py-5 px-2 '>
+      <div className='bg-black w-[50px] py-5 px-2 ' data-aos="fade-left">
           <ul className='socialshb grid gap-8'>
             <li><Link to="#"><FaFacebookSquare /></Link></li>
             <li><Link to="#"></Link><FaTwitterSquare /></li>
@@ -46,7 +56,7 @@ const Home = () => {
 
       </section>
 
-      {/* About me */}
+      About me
       <section id='aboutMe' className='aboutMe bg-secondary p-10 overflow-hidden transition-all'>
       <div className="container2">
         <div className="aboutme__wrapper grid lg:grid-cols-2 lg:gap-[16rem] md:grid-cols-1 md:gap-[10rem] sm:grid-cols-1 sm:gap-[5rem] place-items-center h-[70vh]" >
@@ -65,7 +75,7 @@ const Home = () => {
                 <li><Link to="#"></Link><IoMailSharp /></li>
               </ul>
             </div>
-            <button className='btn btn--v2'>Download CV</button>
+            <button className='btn btn--v2' onClick={handleDownloadResume}>Download CV</button>
           </div>
           <div className="about_right grid grid-cols-1 place-items-center relative" data-aos="flip-down">
             <img src="../../../public/img/aboutme.jpg" alt=""  className='object-cover 2xl:size-[500px]  lg:size-[500px] sm:size-[300px] border border-black z-[999]'/>
@@ -78,9 +88,9 @@ const Home = () => {
       </section>
 
       {/* features*/}
-<section className="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark bg-primary">
+<section className="pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] dark:bg-dark bg-primary ">
    <div className="container mx-auto">
-      <div className="-mx-4 flex flex-wrap">
+      <div className="-mx-4 flex flex-wrap" data-aos="zoom-in">
          <div className="w-full px-4">
             <div className="mx-auto mb-12 max-w-[510px] text-center lg:mb-20">
                <span className="text-secondary mb-2 block text-lg font-semibold">
@@ -99,9 +109,9 @@ const Home = () => {
          </div>
       </div>
       <div className="-mx-4 flex flex-wrap">
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-up">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all  dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -128,9 +138,9 @@ const Home = () => {
                </p>
             </div>
          </div>
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-up">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -159,9 +169,9 @@ const Home = () => {
                </p>
             </div>
          </div>
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-up">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -200,9 +210,9 @@ const Home = () => {
                </p>
             </div>
          </div>
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-down">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -233,9 +243,9 @@ const Home = () => {
                </p>
             </div>
          </div>
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-down">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -262,9 +272,9 @@ const Home = () => {
                </p>
             </div>
          </div>
-         <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+         <div className="w-full px-4 md:w-1/2 lg:w-1/3"  data-aos="flip-down">
             <div
-               className="mb-9 rounded-[20px] bg-white dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
+               className="mb-9 rounded-[20px] bg-white hover:bg-haccent hover:transition-all transition-all dark:bg-dark-2 p-10 shadow-2 hover:shadow-lg md:px-7 xl:px-10"
                >
                <div
                   className="bg-primary mb-8 flex h-[70px] w-[70px] items-center justify-center rounded-2xl"
@@ -305,12 +315,19 @@ const Home = () => {
         <p className='text-primary mb-4'>Type anything and it will return a success prompt</p>
       </div>
     <Terminal/>
+    <div className="playlist flex justify-center items-center">
+          <SpotifyEmbed src="https://open.spotify.com/track/0xqYLCBpCNqPDTsuwPPkfq?si=41e33bc027ca4c88" />
+        </div>
     </div>
+
+    
+      
+    
 
       {/* projects gallery  MUST FINISHED*/}
       <section className='projectG bg-primary2 py-10'>
         <div className="project__wrapper">
-          <div className='block-header text-center mb-5'>
+          <div className='block-header text-center mb-5' data-aos="fade-down-left">
             <h2 className='text-white text-3xl mb-3'>PROJECT GALLERY</h2>
             <p className='text-lg'>Here are some of my projects</p>
           </div>
@@ -319,7 +336,7 @@ const Home = () => {
       </section>
 
       {/* cta */}
-      <section className='cta grid place-items-center bg-white py-7 mt-5'>
+      <section className='cta grid place-items-center bg-white py-7 mt-5' data-aos="fade-left">
           <div className="cta__content grid place-items-center mt-5">
               <h2 className='text-2xl'>Feel free to  talk about upcoming Project</h2>
               <p className='mb-5 text-lg'>"Reach out for personalized assistance."</p>

@@ -12,10 +12,10 @@ const Footer = () => {
   return (
     <>
    <footer className='bg-black py-[2rem] w-full overflow-hidden'>
-    <div className=" px-[15rem]">
-    <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1  lg:gap-[45%] md:gap-[30%]  sm:gap-[1%] '>
+    <div className=" lg:px-[15rem] sm:px-1rem">
+    <div className='grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:place-items-center  lg:gap-[45%] md:gap-[30%]  sm:gap-[1%] '>
     <div className="left mb-5">
-        <h2 className=' mb-1'>PIOLO ARANZA</h2>
+        <h2 className='mb-1'>PIOLO ARANZA</h2>
         <p className=''>A future programmer focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
     </div>
     <div className="right">
